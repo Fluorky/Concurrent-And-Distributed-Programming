@@ -20,3 +20,8 @@ threads = [CountingThread(n) for n in range(5)]
 
 for t in threads:
     t.start()
+    #t.join() #it don't have sense
+
+# for t in threads:
+#     t.join()
+#     print(f'Joined with thread {t.n}')
