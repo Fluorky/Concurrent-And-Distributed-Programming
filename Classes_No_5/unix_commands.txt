@@ -1,0 +1,57 @@
+~ %ps aux
+~ %ls /dev
+~ %head /dev/random
+
+~ %tty
+we get output /dev/ttys019
+in other terminal write this command
+
+~ %echo "Hello world">/dev/ttys019
+
+
+~ %brew install mc
+~ %mc
+
+~ %echo -e '\x1B[5;10H\x1B[7minverse\x1B[0m'
+
+~ %ssh -o StrictHostKeyChecking=no watch.ascii.theater
+
+~ %which python3
+
+~ %echo $PATH
+
+~ %ls -l /opt/homebrew/bin/python3
+
+~ %ls -l /dev
+
+~ %mkdir test1
+
+~ %mkdir test2
+
+~ %ls -l test1
+
+~ %mkdir test1/test2
+
+~ %ls -l | grep test1
+~ %chmod a-x test1
+
+~ %cd test1/test2
+
+~ %chmod a+x test1
+~ %chmod a-r test1
+
+~ %ls -l script.py
+
+~ %./script.py
+
+in env
+~ %./script_env.py
+
+~ %which ls
+
+~ %./ls.py
+
+~ %brew install pstree
+
+(.venv) user@MacBook-Air Classes_No_5 % chmod 770 script_for.py
+(.venv) user@MacBook-Air Classes_No_5 % ./script_for.py a b c d
