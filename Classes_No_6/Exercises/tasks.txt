@@ -1,0 +1,18 @@
+Task 1: Write a Python script that creates 10 child processes.
+Each of the children should enter an infinite loop. Meanwhile,
+the parent process should wait for the termination of these ten children.
+A solution that does not use loops is unacceptable: I will not accept a solution in which
+a student simply copies and pastes 10 fork calls. Verify the solution using the pstree tool
+ (on Ubuntu, it can be installed with the command sudo apt-get install psmisc).
+ Finally, kill all processes with one kill command (kill -9 -n where n is the parent process's PID.
+ This is also the GID of the group of all these processes, and killing with a negative PID sends
+ a signal to the group whose GID is equal to the absolute value of the given negative PID).
+
+Task 2: Write a Python script that creates a chain of 11 processes such that:
+
+Each process in the chain, except the last one, creates a child and then waits for its termination.
+The last process in the chain enters an infinite loop.
+A solution that does not use loops is unacceptable: I will not accept a solution in which a student
+simply copies and pastes 10 fork calls. Verify the solution using the pstree tool (on Ubuntu,
+it can be installed with the command sudo apt-get install psmisc). Finally, kill the last process in
+the chain and verify that the rest also terminate.
