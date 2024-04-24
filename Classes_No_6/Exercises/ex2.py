@@ -1,26 +1,22 @@
 import os
+import time
 
-
-def child_process():
-    print(f"Child process {os.getpid()} started")
-    while True:
-        pass
+def create_child():
+    pid = os.fork()
+    if pid == 0:
+        print("Child process with PID:", os.getpid())
+        time.sleep(1)
+        exit(0)
+    else:
+        os.waitpid(pid, 0)
 
 
 def main():
-    print("Creating a chain of 11 processes...")
-    # Creating a chain of 11 processes
-    for i in range(10):
-        pid = os.fork()
-        if pid == 0:  # Child process
-            child_process()
-            os._exit(0)  # Exiting the child process after finishing the loop
-        else:
-            os.waitpid(pid, 0)  # Parent process waits for the child to finish
-
-    # The last process enters an infinite loop
-    print(f"Last process {os.getpid()} entering an infinite loop...")
-    child_process()
+    print("Parent process with PID:", os.getpid())
+    for _ in range(10):
+        create_child()
+    while True:
+        pass
 
 
 if __name__ == "__main__":

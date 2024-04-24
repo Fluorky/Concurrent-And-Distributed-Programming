@@ -1,0 +1,10 @@
+Task: Create a script in Python that:
+Creates two tubes
+Bifurcate
+The parent process should draw a number n from 0 to 200.
+One of the pipes is used to send information from the parent to the descendant and the other is used to send information from the descendant to the parent.
+The descendant process in the loop reads the floating-point numbers sent by the parent (the numbers are sent one per line, i.e. the readline() method of the file object can be used to read them). After reading each number, it sends back to the parent the square of that number (as a single line of text).
+The parent process in a loop n times (n drawn above) sends back to the descendant the drawn number from 0 to 10 (as a line of text). In each turn of the loop, after sending one number, it waits for the descendant's response. After receiving the response, it prints the number sent to the descendant and received from the descendant on the console and then proceeds to the next iteration.
+When all iterations are complete, the parent process waits for the descendant to finish and terminates the operation itself
+
+Translated with DeepL.com (free version)
