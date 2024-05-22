@@ -1,0 +1,16 @@
+(.venv) maciej@MacBook-Air-MACIEJ Classes_No_9 % python3
+Python 3.9.6 (default, Nov 10 2023, 13:38:27)
+[Clang 15.0.0 (clang-1500.1.0.2.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import asyncio
+>>>
+>>>
+>>> async def main():
+...     print('hello')
+...     await asyncio.sleep(1)
+...     print('world')
+...
+>>> x = main()
+>>> x
+<coroutine object main at 0x10a6139c0>
+>>>
